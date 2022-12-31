@@ -1,9 +1,6 @@
 syntax = "proto3";
 
 message PublicKey {
-  option (gogoproto.compare) = true;
-  option (gogoproto.equal)   = true;
-
   oneof sum {
     bytes ed25519   = 1;
     bytes secp256k1 = 2;
